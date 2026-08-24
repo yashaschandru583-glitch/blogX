@@ -8,7 +8,7 @@ export default defineConfig({
     tailwindcss(),
   ],
 
-  base: '/',
+  base: '/blogX/',
 
   server: {
     hmr: process.env.DISABLE_HMR !== 'true',
