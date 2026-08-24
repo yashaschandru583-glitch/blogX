@@ -1,0 +1,6 @@
+{
+  "name": "BLOGX - Modern Full-Stack Blog Platform",
+  "description": "A modern, high-performance full-stack blogging platform with user authentication, rich blog creation, dynamic commenting, search and tag filtering, and a sleek dark theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
