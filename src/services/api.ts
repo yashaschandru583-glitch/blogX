@@ -9,7 +9,7 @@ const STORAGE_KEYS = {
 const DEMO_PASSWORD = 'password123';
 
 /* =========================================================
-   STORAGE
+   STORAGE HELPERS
 ========================================================= */
 
 function readStorage<T>(key: string, fallback: T): T {
@@ -210,9 +210,15 @@ A good architecture makes applications easier to test, maintain, and extend.
 The most important principle is to keep each part of the application responsible for one clear job.`,
       excerpt:
         'Learn practical architecture patterns for building scalable React applications that remain maintainable as they grow.',
-      image: '',
+      image:
+        'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=85',
       category: 'Programming',
-      tags: ['React', 'JavaScript', 'Architecture', 'Frontend'],
+      tags: [
+        'React',
+        'JavaScript',
+        'Architecture',
+        'Frontend',
+      ],
       author: {
         _id: 'demo_alex',
         name: 'Alex Chen',
@@ -240,9 +246,15 @@ Understanding the fundamentals remains important even when frameworks change.
 HTML, CSS, JavaScript, HTTP, accessibility, performance, and security continue to form the foundation of the modern web.`,
       excerpt:
         'A practical overview of the technologies and principles behind modern web development.',
-      image: '',
+      image:
+        'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85',
       category: 'Technology',
-      tags: ['Web Development', 'JavaScript', 'Web', 'Technology'],
+      tags: [
+        'Web Development',
+        'JavaScript',
+        'Web',
+        'Technology',
+      ],
       author: {
         _id: 'demo_sarah',
         name: 'Sarah Connor',
@@ -270,9 +282,15 @@ Break the project into smaller modules and build the simplest working version fi
 Documentation, testing, version control, and regular iteration can make a huge difference to the final quality of a project.`,
       excerpt:
         'Simple project planning techniques that can help students and developers build better engineering projects.',
-      image: '',
+      image:
+        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85',
       category: 'Education',
-      tags: ['Projects', 'Engineering', 'Students', 'Learning'],
+      tags: [
+        'Projects',
+        'Engineering',
+        'Students',
+        'Learning',
+      ],
       author: {
         _id: 'demo_alex',
         name: 'Alex Chen',
@@ -298,9 +316,14 @@ Developers can use AI tools to explore unfamiliar APIs, generate test cases, exp
 The best results come when developers treat AI as an engineering assistant rather than a replacement for understanding the code.`,
       excerpt:
         'Explore practical ways developers can use AI tools to improve productivity without losing engineering fundamentals.',
-      image: '',
+      image:
+        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85',
       category: 'Technology',
-      tags: ['AI', 'Developer Tools', 'Productivity'],
+      tags: [
+        'AI',
+        'Developer Tools',
+        'Productivity',
+      ],
       author: {
         _id: 'demo_sarah',
         name: 'Sarah Connor',
@@ -326,9 +349,15 @@ Curiosity, problem solving, communication, patience, and the willingness to lear
 Technology changes quickly, so developers who continuously learn and experiment are better prepared for the future.`,
       excerpt:
         'The habits and mindset that help developers continue growing throughout their careers.',
-      image: '',
+      image:
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=85',
       category: 'Lifestyle',
-      tags: ['Career', 'Developers', 'Learning', 'Mindset'],
+      tags: [
+        'Career',
+        'Developers',
+        'Learning',
+        'Mindset',
+      ],
       author: {
         _id: 'demo_alex',
         name: 'Alex Chen',
@@ -354,9 +383,15 @@ Start with a real-world problem, design for actual users, document your decision
 Even a small project can demonstrate software engineering, UI design, database concepts, testing, and deployment skills.`,
       excerpt:
         'How students can turn academic projects into practical portfolio projects.',
-      image: '',
+      image:
+        'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85',
       category: 'Education',
-      tags: ['College', 'Projects', 'Career', 'Portfolio'],
+      tags: [
+        'College',
+        'Projects',
+        'Career',
+        'Portfolio',
+      ],
       author: {
         _id: 'demo_sarah',
         name: 'Sarah Connor',
@@ -434,10 +469,7 @@ function initializeDemoData(): void {
   const posts = getStoredPosts();
 
   /*
-   * Add demo posts if there are no posts.
-   *
-   * This also handles the situation where the previous
-   * api.ts created an empty blogx_posts array.
+   * If there are no posts, create the demo posts.
    */
   if (posts.length === 0) {
     savePosts(createDemoPosts());
